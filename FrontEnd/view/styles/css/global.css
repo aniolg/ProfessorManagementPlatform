@@ -8,13 +8,11 @@ input {
 
 #profile_img_container {
   padding: 2rem;
-  background-color: aquamarine;
   text-align: center;
 }
 
 #profile_info_container {
   padding: 2rem;
-  background-color: antiquewhite;
 }
 
 #profile_img {
