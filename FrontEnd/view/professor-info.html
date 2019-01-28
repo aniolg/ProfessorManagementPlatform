@@ -32,16 +32,13 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
-
     <script
     src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
     integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
     crossorigin="anonymous"></script>
-    <script>
-      $("document").ready(function () {
-        $( "#datepicker" ).datepicker();
-      })
-    </script>
+
+    <script src="../controller/controller.js"></script>
+
   </head>
 
   <body>
@@ -73,19 +70,23 @@
         <!-- profile_info_container -->
       </div>
       <!-- row -->
-      <div class="row">
-        <div class="col-12 col-sm-3 column" id="calendar_container">
+
+      <div class="row" id="availability">
+        <div class="column" id="calendar_container">
             <div id="datepicker"></div>
         </div>
+        <!-- column calendar_container -->
 
-        <div class="col-12 col-sm-10 column" id="dates_list">
-
+        <div class="column" id="dates_list_container">
+          <ul class="list-group" id="dates_list"></ul>
         </div>
-        
+        <!-- column dates_lists_container -->
 
       </div>
+      <!-- row -->
+
       </div>
-     
     <!-- content container -->
+
   </body>
 </html>
