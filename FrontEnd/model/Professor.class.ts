@@ -1,6 +1,6 @@
 class Professor extends Person {
   
-    availability: TrimAvailability[] = []; //!
+    availability: TrimAvailability[] = [];
 
   constructor(
     dni: string,
@@ -12,5 +12,9 @@ class Professor extends Person {
   ) {
     super(dni, name, surname, birthday, telephone, adress);
   }
+
+  addAvailability(trimester:Trimester, dayRange:number, unavailability:Date) {
+    this.availability.push(new TrimAvailability(trimester, dayRange, unavailability));
+}
 
 }
