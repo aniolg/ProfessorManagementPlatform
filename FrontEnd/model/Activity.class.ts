@@ -1,4 +1,4 @@
-class Activity {
+export class Activity {
   title: string;
   description: string;
   softwareReq: boolean; 

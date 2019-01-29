@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Trimester = /** @class */ (function () {
     function Trimester(periodStart, periodEnd) {
         this.periodStart = periodStart;
@@ -6,3 +7,4 @@ var Trimester = /** @class */ (function () {
     }
     return Trimester;
 }());
+exports.Trimester = Trimester;

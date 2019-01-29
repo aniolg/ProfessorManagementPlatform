@@ -1,4 +1,4 @@
-class Trimester {
+export class Trimester {
     periodStart: Date;
     periodEnd: Date;
   

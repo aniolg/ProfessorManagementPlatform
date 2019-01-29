@@ -12,6 +12,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Person_class_1 = require("./Person.class");
 var Professor = /** @class */ (function (_super) {
     __extends(Professor, _super);
     function Professor(dni, name, surname, birthday, telephone, adress) {
@@ -23,4 +25,5 @@ var Professor = /** @class */ (function (_super) {
         this.availability.push(new TrimAvailability(trimester, dayRange, unavailability));
     };
     return Professor;
-}(Person));
+}(Person_class_1.Person));
+exports.Professor = Professor;

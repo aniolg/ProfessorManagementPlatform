@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Person = /** @class */ (function () {
     function Person(dni, name, surname, birthday, telephone, adress) {
         this.dni = dni;
@@ -10,6 +11,7 @@ var Person = /** @class */ (function () {
     }
     return Person;
 }());
+exports.Person = Person;
 //user pass
 //public default
 //activitat?

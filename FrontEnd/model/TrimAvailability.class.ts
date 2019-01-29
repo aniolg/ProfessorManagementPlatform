@@ -1,4 +1,4 @@
-class TrimAvailability {
+export class TrimAvailability {
     trimester:Trimester;
     dayRangeAvailability: dayRange;
     unavailability: Date; //!

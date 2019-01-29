@@ -1,4 +1,6 @@
-class Professor extends Person {
+import { Person } from "./Person.class";
+
+export class Professor extends Person {
   
     availability: TrimAvailability[] = [];
 

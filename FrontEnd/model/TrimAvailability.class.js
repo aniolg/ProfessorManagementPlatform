@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var TrimAvailability = /** @class */ (function () {
     function TrimAvailability(trimester, dayRangeAvailability, unavailability) {
         this.trimester = trimester;
@@ -7,6 +8,7 @@ var TrimAvailability = /** @class */ (function () {
     }
     return TrimAvailability;
 }());
+exports.TrimAvailability = TrimAvailability;
 var dayRange;
 (function (dayRange) {
     dayRange[dayRange["morning"] = 1] = "morning";

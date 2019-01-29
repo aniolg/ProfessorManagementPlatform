@@ -1,4 +1,4 @@
-class Person {
+export class Person {
     dni: string;
     name: string;
     surname: string;
