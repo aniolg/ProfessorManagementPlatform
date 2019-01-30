@@ -2,71 +2,7 @@
   margin-top: 2rem;
 }
 
-.row {
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  margin-bottom: 2rem;
-}
-
-.row #availavility {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 input {
   margin-top: 1rem;
-}
-
-.column {
-  padding: 2rem;
-}
-
-#profile_img_container {
-  text-align: center;
-}
-
-#dates_list_container {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-#dates_list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#dates_list li i {
-  margin-left: 0.25rem;
-}
-
-#dates_list li i:hover {
-  color: #00234a;
-}
-
-#profile_img {
-  max-width: 100%;
-  max-height: 300px;
-}
-
-@media (max-width: 576px) {
-  #calendar_container {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
 }
 /*# sourceMappingURL=global.css.map */

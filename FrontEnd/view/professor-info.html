@@ -19,7 +19,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/css/global.css" />
-    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/css/professor-info.css" />
+    <link
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      rel="stylesheet"
+    />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
@@ -33,60 +37,111 @@
       crossorigin="anonymous"
     ></script>
     <script
-    src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
 
     <script src="../controller/controller.js"></script>
-
   </head>
 
   <body>
     <div class="content container">
-      <div class="row">
-        <div class="col-12 col-sm-3 column" id="profile_img_container">
-          <img
-            src="./img/user-profile.jpg"
-            class="rounded-circle"
-            id="profile_img"
-          />
+      <div class="card bg-light">
+        <div class="card-header">
+          <i class="far fa-user"></i>Información Personal
         </div>
-        <!-- profile_img_container -->
+        <div class="row" id="profile_info_container">
+          <div class="col-12 col-sm-3" id="profile_img_container">
+            <img
+              src="./img/user-profile.jpg"
+              class="rounded-circle"
+              id="profile_img"
+            />
+          </div>
+          <!-- profile_img_container -->
 
-        <div class="col-12 col-sm-9 column" id="profile_info_container">
-          <form>
-            <div class="form-group">
-              <div class="input-group">
-                  <input type="text" aria-label="Name" class="form-control" placeholder="Nombre">
-                  <input type="text" aria-label="Surname" class="form-control" placeholder="Apellido">
+          <div class="col-12 col-sm-9" id="profile_form_container">
+            <form>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      aria-label="Name"
+                      class="form-control"
+                      placeholder="Nombre"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      aria-label="Surname"
+                      class="form-control"
+                      placeholder="Apellido"
+                    />
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  aria-label="DNI"
+                  class="form-control"
+                  placeholder="DNI"
+                />
+                <input
+                  type="text"
+                  aria-label="Adress"
+                  class="form-control"
+                  placeholder="Dirección"
+                />
+                <input
+                  type="text"
+                  aria-label="Birthday"
+                  class="form-control"
+                  placeholder="Fecha de nacimiento"
+                />
+                <input
+                  type="text"
+                  aria-label="Telephone"
+                  class="form-control"
+                  placeholder="Teléfono"
+                />
               </div>
-              <input type="text" aria-label="DNI" class="form-control" placeholder="DNI">
-              <input type="text" aria-label="Adress" class="form-control" placeholder="Dirección">
-              <input type="text" aria-label="Birthday" class="form-control" placeholder="Fecha de nacimiento">
-              <input type="text" aria-label="Telephone" class="form-control" placeholder="Teléfono">
+            </form>
+            <!-- form-->
+          </div>
+          <!-- profile_info_container -->
+        </div>
+        <!-- row -->
+      </div>
+      <!-- card-->
+
+      <div class="card bg-light">
+        <div class="card-header">
+          <i class="far fa-calendar-alt"></i>Disponibilidad
+        </div>
+        <div class="row" id="day_range">
+          <h5 class="col">Rango Horario</h5>
+        </div>
+        <div class="row" id="unable_dates">
+          <h5 class="col">Días no disponibles</h5>
+          <div class="col-12" id="unable_dates_body">
+            <div id="calendar_container">
+              <div id="datepicker"></div>
             </div>
-          </form>
+            <!-- column calendar_container -->
+
+            <div id="dates_list_container">
+              <ul class="list-group" id="dates_list"></ul>
+            </div>
+            <!-- column dates_lists_container -->
+          </div>
+          <!-- unable_dates_body -->
         </div>
-        <!-- profile_info_container -->
+        <!-- row -->
       </div>
-      <!-- row -->
-
-      <div class="row" id="availability">
-        <div class="column" id="calendar_container">
-            <div id="datepicker"></div>
-        </div>
-        <!-- column calendar_container -->
-
-        <div class="column" id="dates_list_container">
-          <ul class="list-group" id="dates_list"></ul>
-        </div>
-        <!-- column dates_lists_container -->
-
-      </div>
-      <!-- row -->
-
-      </div>
+      <!-- card-->
+    </div>
     <!-- content container -->
-
   </body>
 </html>
