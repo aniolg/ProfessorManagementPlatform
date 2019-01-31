@@ -3,9 +3,12 @@ package com.hackaton.application.DTO;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.hackaton.domain.Teacher;
 import com.hackaton.utilities.TimeAvailability;
+import com.hackaton.utilities.InvalidParamException;
 
 public class TeacherDTO {
 	
@@ -19,7 +22,10 @@ public class TeacherDTO {
 	private TimeAvailability timeAvailability;
 	private List<Date> AvailableDays = new ArrayList<>();
 	
-	public TeacherDTO(Teacher teacher) {
+	public TeacherDTO(Teacher teacher) throws InvalidParamException {
+		if(teacher == null)
+			throw new InvalidParamException();
+		
 		this.teacherId = teacher.getTeacherId();
 		this.nameTeacher = teacher.getNameTeacher();
 		this.surnameTeacher = teacher.getSurnameTeacher();
@@ -35,24 +41,50 @@ public class TeacherDTO {
 		return teacherId;
 	}
 
-	public String getNameTeacher() {
-		return nameTeacher;
+	public String getNameTeacher() throws InvalidParamException {
+		if(this.nameTeacher == null || this.nameTeacher.equals(""))
+			throw new InvalidParamException();
+		return this.nameTeacher;
 	}
 
-	public String getSurnameTeacher() {
+	public String getSurnameTeacher() throws InvalidParamException {
+		if(this.surnameTeacher == null || this.surnameTeacher.equals(""))
+			throw new InvalidParamException();
 		return surnameTeacher;
 	}
 
-	public String getDni() {
+	
+	public String getDni() throws InvalidParamException {
+		if(isValidDni(dni))
 		return dni;
+		throw new InvalidParamException();
 	}
+	
+	 private boolean isValidDni(String dni) {
+         String ePattern = "/^(\\d{8})([A-Z])$/";
+         Pattern p = Pattern.compile(ePattern);
+         Matcher m = p.matcher(dni);
+         return m.matches();       
+  }
 
-	public String getBirthDate() {
+	public String getBirthDate() throws InvalidParamException {
+		if(this.birthDate == null || this.birthDate.equals(""))
+			throw new InvalidParamException();
 		return birthDate;
 	}
 
-	public String getTelefon() {
-		return telefon;
+	public String getTelefon() throws InvalidParamException {
+		if(isValidTelefon(telefon))
+			return telefon;
+			throw new InvalidParamException();
+		
+	}
+	
+	private boolean isValidTelefon(String telefon) {
+		String ePattern = "/^[9|6|7][0-9]{8}$/";
+		Pattern p = Pattern.compile(ePattern);
+        Matcher m = p.matcher(telefon);
+        return m.matches();   
 	}
 
 	public String getAddress() {

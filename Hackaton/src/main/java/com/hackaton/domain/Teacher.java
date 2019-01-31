@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.hackaton.application.DTO.TeacherDTO;
+import com.hackaton.utilities.InvalidParamException;
 import com.hackaton.utilities.TimeAvailability;
+
 
 public class Teacher {
 	
@@ -24,15 +27,26 @@ public class Teacher {
 		
 	}
 	
-	public Teacher(Coordinator cordinator,String dni, String birthDate) {
+	public Teacher(Coordinator cordinator, TeacherDTO newTechaerDto) throws InvalidParamException {
+		if(cordinator == null)
+			throw new InvalidParamException();
 		
-	}
+		this.teacherId = newTechaerDto.getTeacherId();
+		this.nameTeacher = newTechaerDto.getNameTeacher();
+		this.surnameTeacher = newTechaerDto.getSurnameTeacher();
+		this.surnameTeacher = newTechaerDto.getDni();
+		this.birthDate = newTechaerDto.getBirthDate();
+		this.telefon = newTechaerDto.getTelefon();
+		this.address = newTechaerDto.getAddress();
+		this.timeAvailability = newTechaerDto.getTimeAvailability();
+		this.AvailableDays = newTechaerDto.getAvailableDays();
+	}	
 
 	public Integer getTeacherId() {
 		return teacherId;
 	}
 
-	public String getNameTeacher() {
+	public String getNameTeacher()  {
 		return nameTeacher;
 	}
 
