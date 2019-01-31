@@ -6,11 +6,16 @@
   margin-right: .5rem;
 }
 
+input {
+  margin-top: 1rem;
+}
+
 #profile_info_container {
   margin: 2rem;
 }
 
 #profile_img_container {
+  padding: 0 1rem 0 0;
   text-align: center;
 }
 
@@ -32,6 +37,24 @@
 
 #day_range {
   padding: 2rem;
+}
+
+#day_range .form-check-inline {
+  padding-left: 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#day_range .form-check-inline .input-group {
+  width: auto;
+  margin-right: 1rem;
+}
+
+#day_range .form-check-inline .input-group .input-group-text {
+  background-color: #fff;
 }
 
 #calendar_container {
@@ -67,10 +90,19 @@
 }
 
 @media (max-width: 576px) {
+  #profile_img_container {
+    padding: 0 15px;
+  }
   #calendar_container {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+  }
+  #day_range .form-check-inline .input-group {
+    margin-top: .5rem;
+  }
+  #dates_list_container {
+    margin-top: .5rem;
   }
 }
 /*# sourceMappingURL=professor-info.css.map */
